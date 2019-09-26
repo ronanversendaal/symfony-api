@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Api;
 
 use App\Entity\Article;
 use App\Service\ArticleService;
@@ -14,10 +14,10 @@ class ArticleController extends AbstractController
     /**
      * @Route(
      *     name="count_articles",
-     *     path="api/article/{id}/count",
+     *     path="article/{id}/count",
      *     methods={"GET"},
      *     defaults={
-     *       "_controller"="\App\Controller\ArticleController::countCommentsinArticle",
+     *       "_controller"="\App\Controller\Api\ArticleController::countCommentsinArticle",
      *       "_api_resource_class"="App\Entity\Article",
      *       "_api_item_operation_name"="countCommentsinArticle"
      *     }
@@ -39,7 +39,7 @@ class ArticleController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('article/index.html.twig', [
+        return $this->render('article/api/index.html.twig', [
             'controller_name' => 'ArticleController',
         ]);
     }
