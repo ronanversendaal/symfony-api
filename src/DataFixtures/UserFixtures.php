@@ -12,6 +12,9 @@ class UserFixtures extends BaseFixture
     public function loadData(ObjectManager $manager)
     {
         $user = new User();
+
+        $user->setUsername('Admin');
+
         $user->setApiToken('test_api_key');
         $user->setEmail('test@example.com');
         $user->setPassword('test');

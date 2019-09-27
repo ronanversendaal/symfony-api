@@ -13,9 +13,6 @@ class UserVoter extends Voter
     const VIEW = 'USER_VIEW';
     const EDIT = 'USER_EDIT';
 
-        //Symfony\Component\Security\Core\Authorization\AccessDecisionManagerInterface
-        //Symfony\Component\Security\Core\Authorization\AccessDecisionManager
-
     /** @var AccessDecisionManager */
     private $decisionManager;
 

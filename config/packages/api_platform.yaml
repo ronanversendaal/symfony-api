@@ -1,8 +1,18 @@
 api_platform:
+    title: 'Symfony 4 API'
+    description: 'Showcasing some awesome stuff'
+    version: '0.0.1'
+    show_webby: false
+    enable_fos_user: true
+    enable_nelmio_api_doc: true
+
     mapping:
         paths: ['%kernel.project_dir%/src/Entity']
     swagger:
         api_keys:
             apiKey:
                 name: X-AUTH-TOKEN
+                type: header
+            jwt:
+                name: Authorization
                 type: header
